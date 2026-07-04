@@ -1,31 +1,19 @@
 # my-first-python-program
 Number Guessing Game
-import random
+# Number Guessing Game 🎮
 
-print("=" * 40)
-print("🎮 Welcome to Number Guessing Game")
-print("=" * 40)
+A simple Python game where the computer chooses a random number between 1 and 100, and the player tries to guess it.
 
-number = random.randint(1, 100)
-attempts = 0
+## Features
+- Random number generation
+- Input validation
+- Counts attempts
+- Beginner-friendly code
 
-while True:
-    guess = input("Enter a number between 1 and 100: ")
+## Requirements
+- Python 3.x
 
-    if not guess.isdigit():
-        print("Please enter a valid number.")
-        continue
+## Run
 
-    guess = int(guess)
-    attempts += 1
-
-    if guess < number:
-        print("Too low! 📉")
-    elif guess > number:
-        print("Too high! 📈")
-    else:
-        print(f"\n🎉 Congratulations!")
-        print(f"You guessed the number in {attempts} attempts.")
-        break
-
-print("\nThanks for playing!")
+```bash
+python main.py
